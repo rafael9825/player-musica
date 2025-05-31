@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Player de Música Gospel</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="shortcut icon" href="imag/favicon-32x32.png" type="image/x-icon">
+</head>
+<body>
+  <div class="player-container">
+    <h1>Deje de bela vista 1</h1>
+    <div class="categoria-botoes">
+      <button id="btnCantadas" class="ativo" aria-label="Exibir músicas cantadas">Cantadas</button>
+      <button id="btnPlaybacks" aria-label="Exibir playbacks">Playback</button>
+    </div>
+    <div id="current-track" class="track-info">Tocando: Nenhuma música</div>
+    <audio id="audio"></audio>
+    <div class="progress-container">
+      <span id="currentTime">0:00</span>
+      <div id="progressBar" class="progress-bar">
+        <div id="progress" class="progress"></div>
+      </div>
+      <span id="duration">0:00</span>
+    </div>
+    <div class="controls">
+      <button id="prev" aria-label="Anterior">⏮️</button>
+      <button id="play" aria-label="Play">▶️</button>
+      <button id="pause" aria-label="Pause">⏸️</button>
+      <button id="next" aria-label="Próxima">⏭️</button>
+      <button id="toggleTheme" aria-label="Alternar tema">🌗</button>
+    </div>
+    <ul id="playlist"></ul>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
+

@@ -1,0 +1,148 @@
+:root {
+  --primary: #1a90ff;
+  --bg: #18181b;
+  --card: #23232a;
+  --text: #fff;
+  --active: #2786e2;
+  --border: #444;
+  --shadow: #000a;
+}
+[data-theme="light"] {
+  --bg: #f6f7fb;
+  --card: #fff;
+  --text: #222;
+  --active: #e2e8f0;
+  --border: #bbb;
+  --shadow: #7773;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: 'Segoe UI', Arial, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  transition: background 0.3s;
+}
+.player-container {
+  background: var(--card);
+  padding: 32px 24px;
+  border-radius: 18px;
+  box-shadow: 0 4px 20px var(--shadow);
+  text-align: center;
+  min-width: 340px;
+  max-width: 400px;
+  width: 100%;
+}
+h1 {
+  margin-bottom: 18px;
+}
+.categoria-botoes {
+  margin-bottom: 12px;
+}
+.categoria-botoes button {
+  background: #333;
+  color: #fff;
+  border: none;
+  margin: 0 8px 8px 0;
+  padding: 8px 24px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 1em;
+  transition: background 0.2s;
+}
+.categoria-botoes button.ativo,
+.categoria-botoes button:hover {
+  background: var(--primary);
+}
+.track-info {
+  font-size: 1.04em;
+  margin-bottom: 10px;
+  min-height: 22px;
+  color: var(--primary);
+  font-weight: bold;
+}
+.progress-container {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 8px;
+}
+.progress-bar {
+  flex: 1;
+  background: var(--border);
+  border-radius: 6px;
+  height: 7px;
+  cursor: pointer;
+  overflow: hidden;
+}
+.progress {
+  background: var(--primary);
+  height: 100%;
+  width: 0%;
+  transition: width 0.2s;
+}
+.controls {
+  margin: 10px 0 14px 0;
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+}
+.controls button {
+  background: var(--primary);
+  color: #fff;
+  border: none;
+  padding: 8px 14px;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 1.15em;
+  transition: background 0.2s, box-shadow 0.2s;
+  box-shadow: 0 2px 8px #0002;
+}
+.controls button:hover {
+  background: var(--active);
+  transform: translateY(-2px) scale(1.08);
+}
+#toggleTheme {
+  background: #444;
+  font-size: 1.15em;
+  margin-left: 10px;
+}
+#playlist {
+  list-style: none;
+  padding: 0;
+  margin-top: 18px;
+  width: 100%;
+}
+#playlist li {
+  padding: 9px 6px;
+  border-bottom: 1px solid var(--border);
+  cursor: pointer;
+  border-radius: 8px;
+  transition: background 0.2s, color 0.2s;
+}
+#playlist li.active {
+  background: var(--primary);
+  color: #fff;
+  font-weight: bold;
+  animation: pulse 0.9s linear infinite alternate;
+}
+@keyframes pulse {
+  from { box-shadow: 0 0 0 0 var(--primary); }
+  to { box-shadow: 0 0 8px 4px var(--primary); }
+}
+@media (max-width: 510px) {
+  .player-container {
+    padding: 14px 3vw;
+    min-width: unset;
+    max-width: 100vw;
+  }
+  h1 { font-size: 1.16em; }
+}
+
