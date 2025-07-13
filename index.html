@@ -6,33 +6,38 @@
   <title>Player de Música Gospel</title>
   <link rel="stylesheet" href="style.css">
   <link rel="shortcut icon" href="imag/favicon-32x32.png" type="image/x-icon">
+
 </head>
 <body>
-  <div class="player-container">
-    <h1>Deje de bela vista 1</h1>
-    <div class="categoria-botoes">
-      <button id="btnCantadas" class="ativo" aria-label="Exibir músicas cantadas">Cantadas</button>
-      <button id="btnPlaybacks" aria-label="Exibir playbacks">Playback</button>
-    </div>
-    <div id="current-track" class="track-info">Tocando: Nenhuma música</div>
-    <audio id="audio"></audio>
-    <div class="progress-container">
-      <span id="currentTime">0:00</span>
-      <div id="progressBar" class="progress-bar">
-        <div id="progress" class="progress"></div>
+  <main>
+    <div class="player-container">
+      <div class="player-cover">
+        <img id="coverImg" src="imagens/default.jpg" alt="Capa da Música" />
       </div>
-      <span id="duration">0:00</span>
+      <h1>Deje de Bela Vista 1</h1>
+      <div class="categoria-botoes">
+        <button id="btnCantadas" class="ativo" aria-label="Exibir músicas cantadas">Cantadas</button>
+        <button id="btnPlaybacks" aria-label="Exibir playbacks">Playback</button>
+      </div>
+      <div id="current-track" class="track-info">Tocando: Nenhuma música</div>
+      <audio id="audio"></audio>
+      <div class="progress-container">
+        <span id="currentTime">0:00</span>
+        <div id="progressBar" class="progress-bar">
+          <div id="progress" class="progress"></div>
+        </div>
+        <span id="duration">0:00</span>
+      </div>
+      <div class="controls">
+        <button id="prev" aria-label="Anterior">⏮️</button>
+        <button id="playPause" aria-label="Tocar/Pausar">▶️</button>
+        <button id="next" aria-label="Próxima">⏭️</button>
+        <button id="repeat" aria-label="Repetir">🔁</button>
+        <button id="toggleTheme" aria-label="Alternar tema">🌗</button>
+      </div>
+      <ul id="playlist" role="listbox" aria-label="Lista de músicas"></ul>
     </div>
-    <div class="controls">
-      <button id="prev" aria-label="Anterior">⏮️</button>
-      <button id="play" aria-label="Play">▶️</button>
-      <button id="pause" aria-label="Pause">⏸️</button>
-      <button id="next" aria-label="Próxima">⏭️</button>
-      <button id="toggleTheme" aria-label="Alternar tema">🌗</button>
-    </div>
-    <ul id="playlist"></ul>
-  </div>
+  </main>
   <script src="script.js"></script>
 </body>
 </html>
-
